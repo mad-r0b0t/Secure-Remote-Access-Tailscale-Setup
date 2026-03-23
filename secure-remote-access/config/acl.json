@@ -1,0 +1,29 @@
+{
+  "ACLs": [
+    {
+      "Action": "accept",
+      "Users": ["admin"],
+      "Ports": ["*:*"]
+    },
+    {
+      "Action": "accept",
+      "Users": ["group:users"],
+      "Ports": ["fileserver:22", "fileserver:445"]
+    },
+    {
+      "Action": "accept",
+      "Users": ["group:monitoring"],
+      "Ports": ["monitoring-node:3000"]
+    }
+  ],
+
+  "Groups": {
+    "group:users": ["android-phone"],
+    "group:monitoring": ["admin-laptop"]
+  },
+
+  "TagOwners": {
+    "tag:server": ["admin"],
+    "tag:monitoring": ["admin"]
+  }
+}
