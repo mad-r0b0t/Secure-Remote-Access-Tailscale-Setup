@@ -1,0 +1,35 @@
+{
+  "network_name": "krause-homelab",
+  "devices": [
+    {
+      "hostname": "admin-laptop",
+      "os": "Windows 11",
+      "ip": "100.64.0.1",
+      "role": "admin",
+      "tags": ["admin", "trusted"]
+    },
+    {
+      "hostname": "fileserver",
+      "os": "Ubuntu Server 22.04",
+      "ip": "100.64.0.2",
+      "role": "server",
+      "services": ["samba", "ssh"],
+      "tags": ["server"]
+    },
+    {
+      "hostname": "monitoring-node",
+      "os": "Debian",
+      "ip": "100.64.0.3",
+      "role": "monitoring",
+      "services": ["grafana", "prometheus"],
+      "tags": ["monitoring"]
+    },
+    {
+      "hostname": "android-phone",
+      "os": "Android",
+      "ip": "100.64.0.4",
+      "role": "client",
+      "tags": ["mobile"]
+    }
+  ]
+}
